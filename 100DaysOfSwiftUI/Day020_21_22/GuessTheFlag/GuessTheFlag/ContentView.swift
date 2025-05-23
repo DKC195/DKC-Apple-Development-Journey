@@ -18,6 +18,10 @@ struct FlagImage: View {
 }
 
 struct ContentView: View {
+    @State private var rotationAmount = [0.0, 0.0, 0.0]
+    @State private var opacity: [Double] = [1 , 1 , 1]
+    @State private var flagScale: [CGFloat] = [1.0, 1.0, 1.0]
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
@@ -54,10 +58,23 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number)
-                        } label: {
-                            FlagImage(country: countries[number])
-                        }
+                                withAnimation(.easeInOut(duration: 0.6)) {
+                                    rotationAmount[number] += 360
+                                    opacity = [0.25, 0.25, 0.25]
+                                    opacity[number] = 1
+                                    flagScale = [0.50, 0.50, 0.50]
+                                    flagScale[number] = 1.2
+                                }
+                                flagTapped(number)
+                            } label: {
+                                FlagImage(country: countries[number])
+                                    .opacity(opacity[number])
+                                    .rotation3DEffect(
+                                        .degrees(rotationAmount[number]),
+                                        axis: (x: 0, y: 1, z: 0)
+                                    )
+                                    .scaleEffect(flagScale[number])
+                            }
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -108,6 +125,9 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        rotationAmount = [0.0, 0.0, 0.0]
+        opacity = [1, 1, 1]
+        flagScale = [1, 1, 1]
     }
     
     func resetApp() {
