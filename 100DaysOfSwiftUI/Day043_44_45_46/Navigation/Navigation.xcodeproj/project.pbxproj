@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		12E678ED2DE06B8800CCEE73 /* Edutainment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edutainment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		121EB6AB2DEEC7AC00DF9684 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		12E678EF2DE06B8800CCEE73 /* Edutainment */ = {
+		121EB6AD2DEEC7AC00DF9684 /* Navigation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Edutainment;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12E678EA2DE06B8800CCEE73 /* Frameworks */ = {
+		121EB6A82DEEC7AC00DF9684 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12E678E42DE06B8800CCEE73 = {
+		121EB6A22DEEC7AC00DF9684 = {
 			isa = PBXGroup;
 			children = (
-				12E678EF2DE06B8800CCEE73 /* Edutainment */,
-				12E678EE2DE06B8800CCEE73 /* Products */,
+				121EB6AD2DEEC7AC00DF9684 /* Navigation */,
+				121EB6AC2DEEC7AC00DF9684 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		12E678EE2DE06B8800CCEE73 /* Products */ = {
+		121EB6AC2DEEC7AC00DF9684 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12E678ED2DE06B8800CCEE73 /* Edutainment.app */,
+				121EB6AB2DEEC7AC00DF9684 /* Navigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12E678EC2DE06B8800CCEE73 /* Edutainment */ = {
+		121EB6AA2DEEC7AC00DF9684 /* Navigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12E678F92DE06B8900CCEE73 /* Build configuration list for PBXNativeTarget "Edutainment" */;
+			buildConfigurationList = 121EB6B62DEEC7AD00DF9684 /* Build configuration list for PBXNativeTarget "Navigation" */;
 			buildPhases = (
-				12E678E92DE06B8800CCEE73 /* Sources */,
-				12E678EA2DE06B8800CCEE73 /* Frameworks */,
-				12E678EB2DE06B8800CCEE73 /* Resources */,
+				121EB6A72DEEC7AC00DF9684 /* Sources */,
+				121EB6A82DEEC7AC00DF9684 /* Frameworks */,
+				121EB6A92DEEC7AC00DF9684 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				12E678EF2DE06B8800CCEE73 /* Edutainment */,
+				121EB6AD2DEEC7AC00DF9684 /* Navigation */,
 			);
-			name = Edutainment;
+			name = Navigation;
 			packageProductDependencies = (
 			);
-			productName = Edutainment;
-			productReference = 12E678ED2DE06B8800CCEE73 /* Edutainment.app */;
+			productName = Navigation;
+			productReference = 121EB6AB2DEEC7AC00DF9684 /* Navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		12E678E52DE06B8800CCEE73 /* Project object */ = {
+		121EB6A32DEEC7AC00DF9684 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					12E678EC2DE06B8800CCEE73 = {
-						CreatedOnToolsVersion = 16.3;
+					121EB6AA2DEEC7AC00DF9684 = {
+						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = 12E678E82DE06B8800CCEE73 /* Build configuration list for PBXProject "Edutainment" */;
+			buildConfigurationList = 121EB6A62DEEC7AC00DF9684 /* Build configuration list for PBXProject "Navigation" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 12E678E42DE06B8800CCEE73;
+			mainGroup = 121EB6A22DEEC7AC00DF9684;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 12E678EE2DE06B8800CCEE73 /* Products */;
+			productRefGroup = 121EB6AC2DEEC7AC00DF9684 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12E678EC2DE06B8800CCEE73 /* Edutainment */,
+				121EB6AA2DEEC7AC00DF9684 /* Navigation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12E678EB2DE06B8800CCEE73 /* Resources */ = {
+		121EB6A92DEEC7AC00DF9684 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12E678E92DE06B8800CCEE73 /* Sources */ = {
+		121EB6A72DEEC7AC00DF9684 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		12E678F72DE06B8900CCEE73 /* Debug */ = {
+		121EB6B42DEEC7AD00DF9684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,16 +178,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		12E678F82DE06B8900CCEE73 /* Release */ = {
+		121EB6B52DEEC7AD00DF9684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,113 +236,94 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		12E678FA2DE06B8900CCEE73 /* Debug */ = {
+		121EB6B72DEEC7AD00DF9684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Edutainment/Edutainment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57M8APKKXY;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = np.com.dhirajkc195.Edutainment;
+				PRODUCT_BUNDLE_IDENTIFIER = np.com.dhirajkc195.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		12E678FB2DE06B8900CCEE73 /* Release */ = {
+		121EB6B82DEEC7AD00DF9684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Edutainment/Edutainment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57M8APKKXY;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = np.com.dhirajkc195.Edutainment;
+				PRODUCT_BUNDLE_IDENTIFIER = np.com.dhirajkc195.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12E678E82DE06B8800CCEE73 /* Build configuration list for PBXProject "Edutainment" */ = {
+		121EB6A62DEEC7AC00DF9684 /* Build configuration list for PBXProject "Navigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12E678F72DE06B8900CCEE73 /* Debug */,
-				12E678F82DE06B8900CCEE73 /* Release */,
+				121EB6B42DEEC7AD00DF9684 /* Debug */,
+				121EB6B52DEEC7AD00DF9684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12E678F92DE06B8900CCEE73 /* Build configuration list for PBXNativeTarget "Edutainment" */ = {
+		121EB6B62DEEC7AD00DF9684 /* Build configuration list for PBXNativeTarget "Navigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12E678FA2DE06B8900CCEE73 /* Debug */,
-				12E678FB2DE06B8900CCEE73 /* Release */,
+				121EB6B72DEEC7AD00DF9684 /* Debug */,
+				121EB6B82DEEC7AD00DF9684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 12E678E52DE06B8800CCEE73 /* Project object */;
+	rootObject = 121EB6A32DEEC7AC00DF9684 /* Project object */;
 }

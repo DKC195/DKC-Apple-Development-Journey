@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
@@ -26,9 +24,7 @@ struct ContentView: View {
                     ScrollView {
                         LazyVGrid(columns: columns) {
                             ForEach(missions) { mission in
-                                NavigationLink {
-                                    MissionView(mission: mission, astronauts: astronauts)
-                                } label: {
+                                NavigationLink(value: mission) {
                                     MissionCardView(mission: mission)
                                 }
                             }
@@ -37,9 +33,7 @@ struct ContentView: View {
                     }
                 } else {
                     List(missions) { mission in
-                        NavigationLink {
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
+                        NavigationLink(value: mission) {
                             HStack(spacing: 20) {
                                 Image(mission.image)
                                     .resizable()
@@ -75,6 +69,9 @@ struct ContentView: View {
                         Label("Toggle View", systemImage: isGridView ? "list.bullet" : "square.grid.2x2")
                     }
                 }
+            }
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(mission: mission, astronauts: astronauts)
             }
         }
     }

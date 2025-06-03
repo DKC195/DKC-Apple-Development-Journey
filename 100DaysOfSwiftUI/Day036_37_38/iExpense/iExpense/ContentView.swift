@@ -64,14 +64,18 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("iExpense")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("Add Expense", systemImage: "plus") {
-                    showingAddExpense = true
-                }
+//                Button("Add Expense", systemImage: "plus") {
+//                    showingAddExpense = true
+                    NavigationLink(destination: AddView(expenses: expenses)) {
+                        Text("Add Expense")
+                    }
+//                }
             }
-            .sheet(isPresented: $showingAddExpense, content: {
-                AddView(expenses: expenses)
-            })
+//            .sheet(isPresented: $showingAddExpense, content: {
+//                AddView(expenses: expenses)
+//            })
         }
     }
     
