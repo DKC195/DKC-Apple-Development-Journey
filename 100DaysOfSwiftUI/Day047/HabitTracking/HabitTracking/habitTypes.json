@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Fitness",
+    "description": "Habits related to physical health and exercise"
+  },
+  {
+    "id": 2,
+    "name": "Learning",
+    "description": "Habits focused on acquiring knowledge and skills"
+  },
+  {
+    "id": 3,
+    "name": "Wellbeing",
+    "description": "Habits that promote mental and emotional health"
+  },
+  {
+    "id": 4,
+    "name": "Productivity",
+    "description": "Habits that improve time management and output"
+  },
+  {
+    "id": 5,
+    "name": "Finance",
+    "description": "Habits related to saving, investing, or budgeting money"
+  }
+]
