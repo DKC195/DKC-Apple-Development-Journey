@@ -5,40 +5,12 @@
 //  Created by Dhiraj KC on 2025-05-25.
 //
 
+import SwiftData
 import SwiftUI
 
-struct ExpenseItem: Identifiable, Codable {
-    var id = UUID()
-    let name: String
-    let type: String
-    let selectedCurrency: String
-    let amount: Double
-}
-
-@Observable
-class Expenses {
-    var items = [ExpenseItem]() {
-        didSet {
-            if let encoded = try? JSONEncoder().encode(items) {
-                UserDefaults.standard.set(encoded, forKey: "items")
-            }
-        }
-    }
-    
-    init() {
-        if let savedItems = UserDefaults.standard.data(forKey: "items") {
-            if let decodedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savedItems) {
-                items = decodedItems
-                return
-            }
-        }
-        
-        items = []
-    }
-}
-
 struct ContentView: View {
-    @State private var expenses = Expenses()
+    @Environment(\.modelContext) private var modelContext
+    @Query var expenses: [ExpenseItem]
     
     @State private var showingAddExpense = false
     
@@ -46,41 +18,46 @@ struct ContentView: View {
         NavigationStack {
             List {
                 Section("Personal") {
-                    ForEach(expenses.items) { item in
-                        if item.type == "Personal" {
-                            ListGen(item: item)
-                        }
+                    ForEach(personalExpenses) { item in
+                        ListGen(item: item)
                     }
-                    .onDelete(perform: removeItems)
+                    .onDelete { offsets in
+                        delete(offsets, from: personalExpenses)
+                    }
                 }
-                
+
                 Section("Business") {
-                    ForEach(expenses.items) { item in
-                        if item.type == "Business" {
-                            ListGen(item: item)
-                        }
+                    ForEach(businessExpenses) { item in
+                        ListGen(item: item)
                     }
-                    .onDelete(perform: removeItems)
+                    .onDelete { offsets in
+                        delete(offsets, from: businessExpenses)
+                    }
                 }
             }
             .navigationTitle("iExpense")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-//                Button("Add Expense", systemImage: "plus") {
-//                    showingAddExpense = true
-                    NavigationLink(destination: AddView(expenses: expenses)) {
-                        Text("Add Expense")
-                    }
-//                }
+                NavigationLink(destination: AddView()) {
+                    Text("Add Expense")
+                }
             }
-//            .sheet(isPresented: $showingAddExpense, content: {
-//                AddView(expenses: expenses)
-//            })
         }
     }
     
-    func removeItems(at offset: IndexSet) {
-        expenses.items.remove(atOffsets: offset)
+    var personalExpenses: [ExpenseItem] {
+        expenses.filter { $0.type == "Personal" }
+    }
+
+    var businessExpenses: [ExpenseItem] {
+        expenses.filter { $0.type == "Business" }
+    }
+
+    func delete(_ offsets: IndexSet, from items: [ExpenseItem]) {
+        for offset in offsets {
+            let item = items[offset]
+            modelContext.delete(item)
+        }
     }
     
     func ListGen(item: ExpenseItem) -> some View {
@@ -98,7 +75,7 @@ struct ContentView: View {
                 .foregroundColor(colorForValue(for: item.amount))
         }
     }
-
+    
     func colorForValue(for amount: Double) -> Color {
         switch amount {
         case 0..<11:
