@@ -5,21 +5,25 @@
 //  Created by Dhiraj KC on 2025-07-18.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users = [User]()
+    @Environment(\.modelContext) var modelContext
+    
+    @State private var usersTemp = [User]()
+    
+    @Query var users: [User]
     
     var body: some View {
         NavigationStack {
-            List(users, id: \.id) { user in
+            List(usersTemp, id: \.id) { user in
                 NavigationLink(destination: DetailView(user: user)) {
                     VStack(alignment: .leading) {
                         Text(user.name).font(.headline)
                         Text(user.email).font(.subheadline).foregroundColor(.secondary)
                     }
                 }
-                
             }
             .navigationBarTitle("Friend Face")
             .toolbar {
@@ -27,24 +31,20 @@ struct ContentView: View {
                     fetchData()
                 }
             }
+            .onAppear {
+                usersTemp = users
+            }
         }
         
     }
     
     func fetchData() {
-        print("Fetching data...")
-        
         guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
             print("Invalid URL")
             return
         }
         
-        print("URL: \(url)")
-        
-        URLSession.shared.dataTask(with: url) {data, response, error in
-            let response = response as! HTTPURLResponse
-            print("Status code: \(response.statusCode)")
-            
+        URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 do {
                     let decoder = JSONDecoder()
@@ -52,13 +52,22 @@ struct ContentView: View {
                     
                     let decoded = try decoder.decode([User].self, from: data)
                     DispatchQueue.main.async {
-                        self.users = decoded
+                        self.usersTemp = decoded
+                        
+                        // Save to SwiftData
+                        for userTemp in decoded {
+                            modelContext.insert(userTemp)
+                        }
+                        
+                        do {
+                            try modelContext.save()
+                        } catch {
+                            print("Failed to save: \(error)")
+                        }
                     }
                 } catch {
                     print("Decoding error: \(error)")
                 }
-            } else if let error = error {
-                print("Error: \(error.localizedDescription)")
             }
         }.resume()
     }
